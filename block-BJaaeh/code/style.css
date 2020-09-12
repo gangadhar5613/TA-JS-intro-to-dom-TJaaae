@@ -1,9 +1,12 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    
 }
 .container {
   display: grid;
@@ -18,4 +21,168 @@ body {
 h1,
 h2 {
   text-align: center;
+}
+
+.header{
+  position: absolute;
+  right: 200px;
+  top: 30px;
+  font-size: 40px;
+
+}
+
+.homeImage{
+  background: url('./images/guy-working-at-home-2127164-0.svg');
+  max-width: 1500px;
+  height: 95vh;
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.homeImage q{
+  position: absolute;
+  bottom: 200px;
+  right: 40px;
+  font-size: 30px;
+  width: 500px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Marck Script', cursive;
+}
+
+.clock{
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFBA55 url('./images/clock.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border:6px solid #935B50;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.1),
+               0 20px 20px rgba(0,0,0,0.2),
+               0 0 0 4px #E19974;
+}
+
+.clock::before{
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border: 2px solid white;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+
+.hour,
+.min,
+.sec{
+  position: absolute;
+}
+
+.hour, .hr{
+  width: 160px;
+  height: 150px;
+}
+
+.min, .mn{
+  width: 190px;
+  height: 180px;
+}
+
+.sec, .sc{
+  width: 230px;
+  height: 230px;
+}
+
+.hr, .mn , .sc{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr::before{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 70px;
+  background: white;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+
+.mn::before{
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 80px;
+  background: rgb(73, 72, 72);
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+
+.sc::before{
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 140px;
+  background:red;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+
+
+body{
+  font-family: 'Kaushan Script', cursive;
+}
+
+
+
+
+@media screen and (max-width:720px){
+  .homeImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    margin: 0 auto;
+    padding: 16px 32px;
+    text-align: center;
+    background-color: tomato;
+    color: white;
+  }
+
+  .header{
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .clock{
+    position: relative;
+    left: 5px;
+    top: -30px;
+  }
+
+  .homeImage q{
+    position: relative;
+    left: 20px;
+    bottom: 80px;
+    width: 250px;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  }
 }
